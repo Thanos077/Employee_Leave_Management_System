@@ -8,7 +8,7 @@ app = FastAPI(title="Employee Leave Management API")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://visionary-zuccutto-60c274.netlify.app"],
+    allow_origins=["https://employee-leave-management-system-077.netlify.app"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
