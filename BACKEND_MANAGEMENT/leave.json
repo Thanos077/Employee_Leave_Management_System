@@ -1,0 +1,110 @@
+[
+    {
+        "leavetype": "annual",
+        "prioritylevel": "Urgent",
+        "startdate": "2026-08-12",
+        "enddate": "2026-08-14",
+        "reason": "sdfghjkl",
+        "attachment": null,
+        "status": "approved",
+        "uid": "NfRjvNQ3pJXOsqItWpdaS2MS20n2",
+        "id": "0f8570f5-264d-46cd-8039-425aabea2c9e",
+        "duration": 3
+    },
+    {
+        "leavetype": "medical",
+        "prioritylevel": "Urgent",
+        "startdate": "2026-08-25",
+        "enddate": "2026-08-28",
+        "reason": "dfhgjkl",
+        "attachment": null,
+        "status": "approved",
+        "uid": "NfRjvNQ3pJXOsqItWpdaS2MS20n2",
+        "id": "774f5c89-8980-4d22-99e3-8da1847eb3ab",
+        "duration": 4
+    },
+    {
+        "leavetype": "medical",
+        "prioritylevel": "Urgent",
+        "startdate": "2026-08-03",
+        "enddate": "2026-08-04",
+        "reason": "dsfghjkl",
+        "attachment": null,
+        "status": "rejected",
+        "uid": "YxWqyfT14nRdNHIxLBas2OiihU22",
+        "id": "e87ed071-ff6b-4891-88f7-ae8ed4437958",
+        "duration": 2
+    },
+    {
+        "leavetype": "casual",
+        "prioritylevel": "Urgent",
+        "startdate": "2026-09-10",
+        "enddate": "2026-09-12",
+        "reason": "hgfds",
+        "attachment": null,
+        "status": "approved",
+        "uid": "NfRjvNQ3pJXOsqItWpdaS2MS20n2",
+        "id": "27015fb5-5478-413d-9358-3bfadfe2874e",
+        "duration": 3
+    },
+    {
+        "leavetype": "casual",
+        "prioritylevel": "Urgent",
+        "startdate": "2026-08-13",
+        "enddate": "2026-08-15",
+        "reason": "nbcvxzz",
+        "attachment": null,
+        "status": "approved",
+        "uid": "nnFhRcqAFgVNsHMmPB1dl3SL0BM2",
+        "id": "2e3cad92-8740-443f-999c-3e3df23a56d6",
+        "duration": 3
+    },
+    {
+        "leavetype": "annual",
+        "prioritylevel": "Standard",
+        "startdate": "2026-08-21",
+        "enddate": "2026-08-22",
+        "reason": "fsmknhgfdsa",
+        "attachment": null,
+        "status": "rejected",
+        "uid": "nnFhRcqAFgVNsHMmPB1dl3SL0BM2",
+        "id": "83cc40d9-94cb-47f7-93da-6779556a8282",
+        "duration": 2
+    },
+    {
+        "leavetype": "annual",
+        "prioritylevel": "Standard",
+        "startdate": "2026-08-06",
+        "enddate": "2026-08-07",
+        "reason": "ytgggggghh",
+        "attachment": null,
+        "status": "rejected",
+        "uid": "BD2u4N6dNRX6F3xWgHsNNbiR26P2",
+        "id": "cf2f6460-a92b-41aa-b349-f39eea63e06c",
+        "duration": 2
+    },
+    {
+        "leavetype": "annual",
+        "prioritylevel": "Standard",
+        "startdate": "2026-08-06",
+        "enddate": "2026-08-07",
+        "reason": "qwqerty",
+        "attachment": null,
+        "status": "approved",
+        "uid": "NfRjvNQ3pJXOsqItWpdaS2MS20n2",
+        "id": "33a67c27-0752-4566-9a09-1a3d63486039",
+        "duration": 2
+    },
+    {
+        "leavetype": "casual",
+        "prioritylevel": "Standard",
+        "startdate": "2026-08-12",
+        "enddate": "2026-08-13",
+        "reason": "qwertyuio",
+        "attachment": null,
+        "status": "approved",
+        "uid": "YxWqyfT14nRdNHIxLBas2OiihU22",
+        "id": "7379facf-7606-4797-8e5f-55f28b25fb90",
+        "duration": 2
+    }
+]

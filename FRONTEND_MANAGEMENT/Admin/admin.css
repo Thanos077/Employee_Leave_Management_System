@@ -1,0 +1,538 @@
+/* ===========================
+   GENERAL
+=========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: #D8DADC;
+}
+
+/* ===========================
+   PAGE
+=========================== */
+.page{
+    min-height:100vh;
+    width:100%;
+    display:flex;
+}
+
+.sidebar {
+    width: 260px;
+    height: 800px;
+}
+
+.header{
+    width:100%;
+    height:64px;
+}
+.main-content{
+    min-width:0;
+    overflow-x:hidden;
+}
+/* ===========================
+   SIDEBAR
+=========================== */
+
+.sidebar h3 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.sidebar .nav-link {
+    color: #495057;
+    padding: 12px 16px;
+    border-radius: 10px;
+    font-weight: 500;
+    transition: .3s;
+}
+
+.sidebar .nav-link:hover {
+    background: #F5F7FA;
+}
+
+.active-menu {
+    background: #0D6EFD;
+    color: #fff !important;
+}
+
+.active-menu i {
+    color: #fff;
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.add-btn {
+    width: 220px;
+    height: 52px;
+    background: #091426;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.add-btn:hover {
+    background: #16243d;
+    color: white;
+}
+
+/* ===========================
+   STATISTICS CARDS
+=========================== */
+.stats-card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(15, 23, 42, .05);
+    height: 136px;
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.stats-card h2 {
+    font-size: 26px;
+    font-weight: 700;
+    margin: 14px 0 2px;
+    line-height: 1;
+    margin-bottom: 6px;
+}
+
+.stats-card p {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .5px;
+    color: #6B7280;
+}
+
+.stats-card img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+}
+
+.percent-badge {
+    background: #E8F0FF;
+    color: #2563EB;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 8px;
+    border-radius: 6px;
+}
+
+/* ===========================
+   STATISTICS CARDS
+=========================== */
+
+.stats-card{
+    background:#fff;
+    border:none;
+    border-radius:16px;
+    padding:22px;
+    height:170px;
+    box-shadow:0 2px 10px rgba(15,23,42,.06);
+    transition:.3s;
+}
+
+.stats-card:hover{
+    transform:translateY(-2px);
+    box-shadow:0 8px 20px rgba(15,23,42,.08);
+}
+
+
+
+.stats-card img{
+    width:44px;
+    height:44px;
+    object-fit:contain;
+}
+
+.stats-card h2{
+    color:#111827;
+    margin-top:10px;
+    margin-bottom:4px;
+    font-size:30px;
+    font-weight:700;
+    line-height:1;
+}
+
+.stats-card p{
+    margin:0;
+    font-size:12px;
+    font-weight:600;
+    letter-spacing:.6px;
+    color:#6B7280;
+    text-transform:uppercase;
+}
+
+.percent-badge{
+    background:#EEF4FF;
+    color:#2563EB;
+    font-size:12px;
+    font-weight:600;
+    padding:4px 8px;
+    border-radius:6px;
+}
+
+/* ===========================
+   GOAL CARD
+=========================== */
+
+.goal-card{
+    background:#091426;
+    border:none;
+    border-radius:16px;
+    padding:22px;
+    height:170px;
+    color:#fff;
+    box-shadow:0 2px 10px rgba(15,23,42,.08);
+}
+
+.goal-card h6{
+    margin:0;
+    font-size:14px;
+    font-weight:600;
+    color:#D1D5DB;
+}
+
+.goal-card h3{
+    margin:0;
+    font-size:30px;
+    font-weight:700;
+}
+
+.goal-card .progress{
+    height:6px;
+    margin:22px 0 18px;
+    background:rgba(255,255,255,.15);
+    border-radius:20px;
+}
+
+.goal-card .progress-bar{
+    border-radius:20px;
+}
+/* ===========================
+   LEAVE TABLE CARD
+=========================== */
+
+.leave-card{
+    background:#fff;
+    border:none;
+    border-radius:18px;
+    padding:24px;
+    box-shadow:0 2px 10px rgba(15,23,42,.05);
+}
+
+/* ===========================
+   TABS
+=========================== */
+
+.nav-tabs{
+    gap:24px;
+    border:none;
+}
+
+.nav-tabs .nav-link{
+    border:none;
+    background:transparent;
+    color:#64748B;
+    font-size:14px;
+    font-weight:600;
+    padding:0 0 12px;
+}
+
+.nav-tabs .nav-link.active{
+    color:#2563EB;
+    border:none;
+    border-bottom:2px solid #2563EB;
+    background:transparent;
+}
+
+/* ===========================
+   SEARCH
+=========================== */
+
+.search-area{
+    width:320px;
+}
+
+.search-area .input-group-text{
+    background:#fff;
+    border-right:none;
+}
+
+.search-area .form-control{
+    border-left:none;
+}
+
+.search-area input{
+    height:42px;
+}
+
+/* ===========================
+   FILTER BUTTON
+=========================== */
+
+.filter-btn{
+    height:42px;
+    border:1px solid #E2E8F0;
+    background:#fff;
+    color:#334155;
+    border-radius:10px;
+    font-size:14px;
+    font-weight:500;
+    padding:0 16px;
+}
+
+.filter-btn:hover{
+    background:#F8FAFC;
+}
+
+/* ===========================
+   TABLE
+=========================== */
+
+.table{
+    margin:0;
+}
+
+.table thead th{
+    background:#F8FAFC;
+    color:#94A3B8;
+    border:none;
+    font-size:12px;
+    font-weight:600;
+    padding:16px;
+}
+
+.table tbody td{
+    padding:18px 16px;
+    border-top:1px solid #F1F5F9;
+    vertical-align:middle;
+}
+
+.table tbody tr:hover{
+    background:#FAFAFA;
+}
+/* ===========================
+   STATUS BADGES
+=========================== */
+
+.status-approved {
+    background: #D1FAE5;
+    color: #047857;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.status-pending {
+    background: #FEF3C7;
+    color: #B45309;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.status-rejected {
+    background: #FEE2E2;
+    color: #DC2626;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* ===========================
+   ACTION BUTTONS
+=========================== */
+
+.action-btn {
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 8px;
+    background: #F1F3F5;
+}
+
+.action-btn:hover {
+    background: #E2E6EA;
+}
+
+/* ===========================
+   PAGINATION
+=========================== */
+
+.pagination .page-link {
+    border: none;
+    color: #495057;
+    margin: 0 2px;
+    border-radius: 8px;
+}
+
+.pagination .active .page-link {
+    background: #0D6EFD;
+    color: white;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:992px) {
+
+    .sidebar {
+        width: 220px;
+    }
+
+    .search-area {
+        width: 100%;
+    }
+
+}
+
+@media(max-width:768px) {
+
+    .page {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-height: auto;
+    }
+
+    .add-btn {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .stats-card,
+    .goal-card {
+        height: auto;
+    }
+
+}
+/* ===========================
+   ACTION BUTTONS
+=========================== */
+
+.action-btn{
+    width:36px;
+    height:36px;
+    border:none;
+    border-radius:8px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    transition:0.2s ease;
+}
+
+.approve-btn{
+    background:#DCFCE7;
+    color:#16A34A;
+}
+
+.approve-btn:hover{
+    background:#BBF7D0;
+}
+
+.reject-btn{
+    background:#FEE2E2;
+    color:#DC2626;
+}
+
+.reject-btn:hover{
+    background:#FECACA;
+}
+
+.action-btn i{
+    font-size:16px;
+}
+
+.action-btn:disabled{
+    opacity:0.5;
+    cursor:not-allowed;
+}
+.dashboard-card{
+    border-radius:12px;
+    padding:32px;
+    background:#fff;
+    min-height:250px;
+    box-shadow:0 2px 8px rgba(0,0,0,.05);
+}
+
+.progress-circle{
+    width:120px;
+    height:120px;
+    margin:auto;
+    border-radius:50%;
+    background:conic-gradient(
+        #0d6efd 0 45%,
+        #111827 45% 75%,
+        #d1d5db 75% 100%
+    );
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+}
+
+.progress-circle::before{
+    content:"";
+    width:88px;
+    height:88px;
+    border-radius:50%;
+    background:#fff;
+    position:absolute;
+}
+
+.progress-circle span{
+    position:relative;
+    z-index:1;
+    font-weight:700;
+    font-size:22px;
+}
+
+.legend-dot{
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    display:inline-block;
+    margin-right:8px;
+}
+
+.security-card{
+    background:#07162E;
+    border-radius:12px;
+    padding:32px;
+    min-height:250px;
+    position:relative;
+    overflow:hidden;
+}
+
+.security-card p{
+    font-size:14px;
+    line-height:1.8;
+    max-width:75%;
+}
+
+.security-icon{
+    position:absolute;
+    right:25px;
+    bottom:20px;
+    font-size:90px;
+    color:rgba(255,255,255,.08);
+}

@@ -1,0 +1,535 @@
+/* ===========================
+   GENERAL
+=========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: #F4F7FB;
+}
+
+.page {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* ===========================
+   SIDEBAR
+=========================== */
+
+.sidebar {
+    width: 260px;
+    min-height: 100vh;
+    background: #fff;
+    border-right: 1px solid #E9EDF3;
+    padding: 24px;
+}
+
+.sidebar h4 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.nav-link {
+    color: #4B5563 !important;
+    border-radius: 10px;
+    padding: 12px 16px;
+    font-weight: 500;
+    transition: .3s;
+}
+
+.nav-link:hover {
+    background: #EEF4FF;
+    color: #0D6EFD !important;
+}
+
+.nav-link.active {
+    background: #0D6EFD;
+    color: #fff !important;
+}
+
+.nav-link.active i {
+    color: #fff;
+}
+
+/* ===========================
+   CONTENT
+=========================== */
+
+.flex-grow-1 {
+    padding: 0px;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+.header {
+    background: #fff;
+    height: 70px;
+    padding: 0 32px;
+}
+
+/* ===========================
+   TEXT
+=========================== */
+
+.text-primary {
+    color: #0058BE !important;
+}
+
+h2 {
+    font-weight: 700;
+}
+
+/* ===========================
+   ALL CARDS
+=========================== */
+
+.card {
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, .06);
+}
+
+/* ===========================
+   LEAVE CARDS
+=========================== */
+
+.leave-card {
+    padding: 18px;
+    height: 140px;
+}
+
+.leave-card p {
+    font-size: 12px;
+    font-weight: 600;
+    color: #6B7280;
+}
+
+.leave-card h2 {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.leave-progress {
+    height: 5px;
+    border-radius: 30px;
+    background: #E9ECEF;
+}
+
+.leave-progress .progress-bar {
+    border-radius: 30px;
+}
+
+/* ===========================
+   UTILIZATION CARD
+=========================== */
+
+.design-card {
+    background: linear-gradient(180deg, #0B2348, #08111F);
+    color: white;
+    min-height: 430px;
+}
+
+.circle-container {
+    display: flex;
+    justify-content: center;
+    margin: 25px 0;
+}
+
+
+
+.circle-progress {
+
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    --annual: 0deg;
+    --used: 0deg;
+
+    background: conic-gradient(#0D6EFD 0deg var(--annual),
+            white var(--annual) var(--used),
+            #24364f var(--used) 360deg);
+
+    position: relative;
+}
+
+;
+
+
+.circle-progress::before {
+
+    content: "";
+    position: absolute;
+
+    width: 150px;
+    height: 150px;
+
+    background: #08111F;
+    border-radius: 50%;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+.circle-inner {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+}
+
+.circle-inner h1 {
+
+    color: white;
+    font-size: 46px;
+    font-weight: 700;
+}
+
+.circle-inner p {
+
+    color: #A8B3C7;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.legend-dot {
+
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+/* ===========================
+   TABLE
+=========================== */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+thead th{
+    font-size:12px;
+    font-weight:600;
+    color:#7A7A7A;
+    text-transform:uppercase;
+    padding:18px 20px;
+    border-bottom:1px solid #ECECEC;
+}
+
+tbody td{
+    padding:18px 20px;
+    font-size:14px;
+    color:#202020;
+    vertical-align:middle;
+    border-bottom:1px solid #F2F2F2;
+}
+
+tbody tr:last-child td{
+    border-bottom:none;
+}
+
+.table tbody tr {
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .03);
+}
+
+/* ===========================
+   PRO TIP
+=========================== */
+
+.pro-tip-card {
+
+    background: linear-gradient(135deg, #0058BE, #0A75F7);
+    border: none;
+    border-radius: 18px;
+    padding: 28px;
+    min-height: 190px;
+}
+
+.tip-icon {
+
+    width: 30px;
+    height: 30px;
+
+    border-radius: 15px;
+
+    background: rgba(255, 255, 255, .18);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    font-size: 28px;
+}
+
+.pro-tip-card h4 {
+
+    color: white;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.pro-tip-card p {
+
+    color: rgba(255, 255, 255, .85);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.request-btn {
+
+    background: white;
+    color: #0058BE;
+
+    border: none;
+    border-radius: 12px;
+
+    padding: 10px 22px;
+
+    font-weight: 600;
+}
+
+.request-btn:hover {
+
+    background: #F4F4F4;
+    color: #0058BE;
+}
+
+/* ===========================
+   GUIDE CARD
+=========================== */
+
+.guide-card {
+
+    position: relative;
+    overflow: hidden;
+
+    height: 190px;
+
+    border-radius: 18px;
+
+    background: url("../images/worklife.jpg") center/cover no-repeat;
+
+    display: flex;
+    align-items: flex-end;
+}
+
+.guide-card::before {
+
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0, 0, 0, .35);
+}
+
+.guide-overlay {
+
+    position: relative;
+    z-index: 2;
+
+    color: white;
+    padding: 20px;
+}
+
+.guide-label {
+
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.guide-title {
+
+    margin-top: 8px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 992px) {
+
+    .page{
+        flex-direction:column;
+    }
+
+    .sidebar{
+        width:100%;
+        min-height:auto;
+        padding:20px;
+    }
+
+    .header{
+        padding:15px 20px;
+        justify-content:flex-end;
+    }
+
+    .container{
+        margin-left:0 !important;
+        padding:0 12px;
+    }
+
+    .leave-card{
+        height:auto;
+        margin-bottom:16px;
+    }
+
+    .design-card{
+        margin-bottom:20px;
+    }
+
+    .pro-tip-card{
+        margin-bottom:20px;
+    }
+
+    .pro-tip-card .card-body{
+        flex-direction:column;
+        align-items:flex-start !important;
+        gap:20px;
+    }
+
+    .guide-card{
+        height:220px;
+    }
+}
+@media (max-width:576px){
+
+    .header{
+        padding:12px;
+    }
+
+    .sidebar{
+        padding:15px;
+    }
+
+    h2{
+        font-size:28px;
+    }
+
+    .leave-card h2{
+        font-size:32px;
+    }
+
+    .circle-progress{
+        width:170px;
+        height:170px;
+    }
+
+    .circle-progress::before{
+        width:120px;
+        height:120px;
+    }
+
+    .circle-inner h1{
+        font-size:34px;
+    }
+
+    .pro-tip-card{
+        padding:20px;
+    }
+
+    .guide-title{
+        font-size:20px;
+    }
+
+    table{
+        min-width:650px;
+    }
+}
+
+.status{
+    padding:5px 12px;
+    border-radius:6px;
+    font-size:11px;
+    font-weight:700;
+    text-transform:uppercase;
+}
+
+.status.approved{
+    background:#DFF7E6;
+    color:#1A9A4A;
+}
+
+.status.pending{
+    background:#E8F0FF;
+    color:#2F6FED;
+}
+
+.status.completed{
+    background:#ECECEC;
+    color:#555;
+}
+
+.status.rejected{
+    background:#FDE5E5;
+    color:#D93939;
+}
+.recent-request-card{
+    background:#fff;
+    border-radius:18px;
+    padding:28px;
+    box-shadow:0 10px 30px rgba(0,0,0,.06);
+}
+.leave-type{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-weight:600;
+}
+
+.leave-icon{
+    width:34px;
+    height:34px;
+    border-radius:50%;
+    background:#EAF2FF;
+    color:#2F80ED;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+@media (max-width:992px){
+
+    .sidebar{
+
+        position:fixed;
+        top:0;
+        left:-280px;
+
+        width:260px;
+        height:100vh;
+
+        z-index:1050;
+
+        transition:.3s;
+        box-shadow:0 0 20px rgba(0,0,0,.15);
+    }
+
+    .sidebar.show{
+        left:0;
+    }
+
+    .header{
+        position:sticky;
+        top:0;
+        z-index:1000;
+    }
+}

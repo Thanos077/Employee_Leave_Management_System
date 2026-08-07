@@ -1,0 +1,22 @@
+[
+    {
+        "id": "BD2u4N6dNRX6F3xWgHsNNbiR26P2",
+        "email": "saloni@gmail.com",
+        "role": "Admin"
+    },
+    {
+        "id": "YxWqyfT14nRdNHIxLBas2OiihU22",
+        "email": "seetam@gmail.com",
+        "role": "Employee"
+    },
+    {
+        "id": "NfRjvNQ3pJXOsqItWpdaS2MS20n2",
+        "email": "sagir@gmail.com",
+        "role": "Employee"
+    },
+    {
+        "id": "nnFhRcqAFgVNsHMmPB1dl3SL0BM2",
+        "email": "mohan@gmail.com",
+        "role": "Employee"
+    }
+]

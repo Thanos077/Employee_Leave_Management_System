@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADMIN HOME PAGE</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="admin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body style="background-color:#D8DADC;">
+    <div class="container-fluid p-0">
+        <div class=" page d-flex">
+            <div class="sidebar bg-light  p-3">
+
+                <h4 class="text-center">Leave Ease</h4>
+                <hr>
+
+                <ul class="nav flex-column">
+
+                    <li class="nav-item mb-2">
+                        <a href="#" class="nav-link text-dark">
+                            <i class="bi bi-house-door me-3"></i>Dashboard
+                        </a>
+                    </li>
+
+                    <li class="nav-item mb-2">
+                        <a href="#" class="nav-link text-dark">
+                            <i class="bi bi-calendar3 me-3"></i>My Leave
+                        </a>
+                    </li>
+
+                    <li class="nav-item mb-2">
+                        <a href="#" class="nav-link text-dark">
+                            <i class="bi bi-plus-circle me-3"></i>Apply for Leave
+                        </a>
+                    </li>
+
+                    <hr>
+
+                    <li class="nav-item mb-2">
+                        <a href="#" class="nav-link text-dark">
+                            <i class="bi bi-people me-3"></i>Team Approval
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-dark active-menu">
+                            <i class="bi bi-shield-check me-3"></i>Admin Panel
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="main-content flex-grow-1">
+
+                <!-- Header -->
+                <div class="header d-flex justify-content-end align-items-center p-3 bg-white shadow-sm">
+                    <div>
+                        John Doe
+                        <i class="bi bi-person-circle me-2"></i>
+                    </div>
+                </div>
+
+                <!-- Main Content -->
+                <div class="container-fluid px-4 py-3">
+
+                    <!-- Top Row -->
+                    <div class="d-flex justify-content-between align-items-start">
+
+                        <!-- Left Side -->
+                        <div>
+                            <p class="text-muted mb-0" style="font-size: 12px;">
+                                ADMINISTRATIVE CONTROL
+                            </p>
+
+                            <h3 style="font-size: 30px;">
+                                System Overview
+                            </h3>
+                        </div>
+
+                        <!-- Right Side -->
+                        <button class="btn btn-dark">
+                            + ADD EMPLOYEE
+                        </button>
+
+                    </div>
+
+
+                    <div class="row g-4 mb-4">
+
+                        <!-- Total Employees -->
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card stats-card">
+                                <div class="d-flex justify-content-between align-items-start">
+                                    <img src="../images/Background (1).png" alt="Employee">
+
+                                    <span class="badge bg-primary-subtle text-primary fw-semibold px-2 py-1">
+                                        +12%
+                                    </span>
+                                </div>
+
+                                <div class="mt-4">
+                                    <h2>1280</h2>
+                                    <p>TOTAL EMPLOYEES</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Departments -->
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card stats-card">
+                                <div class="d-flex justify-content-between align-items-start">
+                                    <img src="../images/Background.png" alt="Department">
+
+                                    <small class="text-muted fw-semibold">
+                                        Active Now
+                                    </small>
+                                </div>
+
+                                <div class="mt-4">
+                                    <h2>24</h2>
+                                    <p>DEPARTMENTS</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pending -->
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card stats-card">
+                                <div class="d-flex justify-content-between align-items-start">
+                                    <img src="../images/Background (2).png" alt="Pending">
+
+                                    <img src="../images/Container.png" alt="Users" width="58">
+                                </div>
+
+                                <div class="mt-4">
+                                    <h2>18</h2>
+                                    <p>PENDING TODAY</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Goal -->
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card goal-card text-white">
+
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h6 class="mb-0">Current Quarter Goal</h6>
+                                </div>
+
+                                <div class="progress mt-4 mb-3">
+                                    <div class="progress-bar bg-primary" style="width:75%"></div>
+                                </div>
+
+                                <h3 class="mb-0 fw-bold">75%</h3>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="card leave-card">
+
+                        <!-- Top -->
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+
+                            <ul class="nav nav-tabs border-0 mb-0">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#">LEAVE REQUESTS</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">LEAVE TYPES</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">HOLIDAYS</a>
+                                </li>
+                            </ul>
+
+                            <div class="d-flex gap-2">
+
+                                <div class="search-area">
+
+                                    <div class="input-group">
+
+                                        <span class="input-group-text">
+                                            <i class="bi bi-search"></i>
+                                        </span>
+
+                                        <input type="text" class="form-control"
+                                            placeholder="Search by name, ID, or department">
+
+                                    </div>
+
+                                </div>
+
+                                <button class="btn filter-btn">
+                                    <i class="bi bi-funnel"></i>
+                                    Filters
+                                </button>
+
+                                <button class="btn filter-btn">
+                                    <i class="bi bi-download"></i>
+                                    Export CSV
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                        <table class="table align-middle mb-0">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>Employee</th>
+                                    <th>Leave Type</th>
+                                    <th>Duration</th>
+                                    <th>Dates</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+
+                                </tr>
+
+                            </thead>
+
+                            <tbody id="emptable"></tbody>
+
+                        </table>
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+
+                            <small id="pageInfo"></small>
+
+                            <div id="pagination" class="d-flex gap-2"></div>
+
+                        </div>
+                    </div>
+                    <div class="row g-4 mt-2">
+
+                        <!-- Department Distribution -->
+                        <div class="col-lg-6">
+                            <div class="card dashboard-card border-0">
+
+                                <div class="d-flex justify-content-between align-items-center mb-4">
+                                    <h6 class="mb-0 fw-semibold">Department Distribution</h6>
+                                    <i class="bi bi-three-dots-vertical"></i>
+                                </div>
+
+                                <div class="row align-items-center">
+
+                                    <!-- Circle -->
+                                    <div class="col-5 text-center">
+
+                                        <div class="progress-circle">
+                                            <span>84%</span>
+                                        </div>
+
+                                    </div>
+
+                                    <!-- Legend -->
+                                    <div class="col-7">
+
+                                        <div class="d-flex justify-content-between mb-3">
+                                            <div>
+                                                <span class="legend-dot bg-primary"></span>
+                                                Engineering
+                                            </div>
+                                            <strong>45%</strong>
+                                        </div>
+
+                                        <div class="d-flex justify-content-between mb-3">
+                                            <div>
+                                                <span class="legend-dot bg-dark"></span>
+                                                Design
+                                            </div>
+                                            <strong>30%</strong>
+                                        </div>
+
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <span class="legend-dot bg-secondary"></span>
+                                                Others
+                                            </div>
+                                            <strong>25%</strong>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Security Notice -->
+                        <div class="col-lg-6">
+                            <div class="card security-card border-0">
+
+                                <h6 class="text-white mb-3">
+                                    System Security Notice
+                                </h6>
+
+                                <p class="text-light mb-4">
+                                    There are currently <strong>4</strong> administrative users logged in.
+                                    Ensure all session tokens are rotated every 30 days as per compliance policy.
+                                </p>
+
+                                <button class="btn btn-light fw-semibold">
+                                    Audit Logs
+                                </button>
+
+                                <i class="bi bi-shield-lock security-icon"></i>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <script src="admin.js"></script>
+</body>
+
+</html>

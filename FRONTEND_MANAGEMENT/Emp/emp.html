@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMPLOYEE HOME PAGE</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="emp.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body style="background-color:#D8DADC;">
+    <div class="container-fluid p-0">
+        <div class=" page d-flex">
+            <div class="sidebar bg-light  p-3">
+
+                <h4 class="text-center">Leave Ease</h4>
+                <hr>
+
+                <ul class="nav flex-column">
+
+                    <li class="nav-item mb-2">
+                        <a href="emp.html" class="nav-link text-dark">
+                            <i class="bi bi-house-door me-3"></i>Dashboard
+                        </a>
+                    </li>
+
+                    <li class="nav-item mb-2">
+                        <a href="leave.html" class="nav-link text-dark">
+                            <i class="bi bi-plus-circle me-3"></i>Apply for Leave
+                        </a>
+                    </li>
+
+                    <hr>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-dark active-menu">
+                            <i class="bi bi-shield-check me-3"></i>Admin Panel
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="flex-grow-1">
+
+                <!-- Header -->
+                <div class="header d-flex justify-content-between align-items-center bg-white border-bottom px-4 py-2">
+
+                    <button class="btn d-lg-none p-0 border-0" id="menuBtn">
+                        <i class="bi bi-list fs-2"></i>
+                    </button>
+
+                    <div class="d-flex align-items-center gap-2 ms-auto">
+                        <small class="fw-semibold">Marcus Chen</small>
+                        <i class="bi bi-person-circle fs-5"></i>
+                    </div>
+
+                </div>
+                <!-- Main Content -->
+                <div class="container my-4 ms-3">
+
+                    <div class="row align-items-center">
+
+                        <!-- Left Section -->
+                        <div class="col-lg-5">
+                            <div class="d-flex align-items-center mb-2">
+                                <div class="border-top border-primary me-2" style="width:45px;"></div>
+                                <p class="mb-0 text-primary fw-semibold" style="font-size:13px;">
+                                    EMPLOYEE OVERVIEW
+                                </p>
+                            </div>
+
+                            <h2 class="fw-bold">
+                                Good Morning, DEAR.
+                            </h2>
+
+                            <p class="text-muted mb-0">
+                                You have <span class="text-primary fw-semibold">3 days</span>
+                                of upcoming leave starting next Thursday.
+                                Everything is on track.
+                            </p>
+                        </div>
+
+                        <!-- Right Section -->
+                        <div class="col-lg-7">
+                            <div class="row g-3">
+
+                                <!-- Card 1 -->
+                                <div class="col-md-4">
+                                    <div class="card leave-card p-3 shadow-sm">
+
+                                        <p class="mb-1 text-uppercase small">ANNUAL LEAVE</p>
+
+                                        <div class="d-flex align-items-end">
+                                            <h2 id="annualLeave" class="fw-bold mb-0">0</h2>
+                                            <span class="text-muted ms-1 mb-1">/ 24 days</span>
+                                        </div>
+
+                                        <div class="progress mt-3 leave-progress">
+                                            <div id="annualBar" class="progress-bar bg-primary" style="width:75%;">
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <!-- Card 2 -->
+                                <div class="col-md-4">
+                                    <div class="card leave-card p-3 shadow-sm">
+
+                                        <p class="mb-1 text-uppercase small">SICK LEAVE</p>
+
+                                        <div class="d-flex align-items-end">
+                                            <h2 id="sickLeave" class="fw-bold mb-0">0</h2>
+                                            <span class="text-muted ms-1 mb-1">/ 10 days</span>
+                                        </div>
+
+                                        <div class="progress mt-3 leave-progress">
+                                            <div id="sickBar" class="progress-bar bg-danger" style="width:60%;"></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <!-- Card 3 -->
+                                <div class="col-md-4">
+                                    <div class="card leave-card p-3 shadow-sm">
+
+                                        <p class="mb-1 text-uppercase small">CASUAL LEAVE</p>
+
+                                        <div class="d-flex align-items-end">
+                                            <h2 id="casualLeave" class="fw-bold mb-0">0</h2>
+                                            <span class="text-muted ms-1 mb-1">/ 06 days</span>
+                                        </div>
+
+                                        <div class="progress mt-3 leave-progress">
+                                            <div id="casualBar" class="progress-bar bg-dark" style="width:67%;"></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row mt-4">
+
+                        <!-- Leave Utilization Card -->
+                        <div class="col-lg-5">
+                            <div class="card design-card bg-dark">
+                                <h3 class="py-3 ps-3 text-white" style="font-size:20px;">
+                                    Leave Utilization
+                                </h3>
+
+                                <p class="ps-3 text-white" style="font-size:16px;">
+                                    Fiscal Year 2026 distribution
+                                </p>
+
+                                <div class="circle-container mt-1">
+                                    <div id="circleProgress" class="circle-progress">
+                                        <div class="circle-inner">
+                                            <h1 id="totalUsedPercent">0%</h1>
+                                            <p>TOTAL USED</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="px-3 pb-3">
+
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <div class="d-flex align-items-center">
+                                            <span class="legend-dot bg-primary me-2"></span>
+                                            <span class="text-white">Annual Leave</span>
+                                        </div>
+                                        <span id="annualPercent" class="text-white">0%</span>
+                                    </div>
+
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="d-flex align-items-center">
+                                            <span class="legend-dot bg-white me-2"></span>
+                                            <span class="text-white">Sick/Casual</span>
+                                        </div>
+                                        <span id="sickCasualPercent" class="text-white">0%</span>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Recent Requests Table -->
+                        <div class="col-lg-7">
+                            <div class="card shadow-sm p-3">
+                                <h3>Recent Requests</h3>
+                                <p class="text-muted">Your last 5 leave applications</p>
+
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-striped text-center align-middle">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th>Leave Type</th>
+                                                <th>Duration</th>
+                                                <th>Dates</th>
+                                                <th>Status</th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody id="emptable">
+                                            <!-- JavaScript will add rows here -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-4 g-3 align-items-stretch">
+
+                            <!-- Pro Tip -->
+                            <div class="col-lg-8 d-flex">
+                                <div class="card pro-tip-card w-100">
+                                    <div class="card-body d-flex align-items-center justify-content-between">
+
+                                        <!-- Left -->
+                                        <div class="d-flex align-items-center">
+
+                                            <div class="tip-icon me-3">
+                                                <i class="bi bi-lightbulb"></i>
+                                            </div>
+
+                                            <div>
+                                                <h5 class="fw-bold text-white mb-2">
+                                                    Pro-tip: Early Planning
+                                                </h5>
+
+                                                <p class="text-white-50 mb-0 small">
+                                                    Planning a long break? Requesting leave
+                                                    <br>
+                                                    30 days in advance increases approval
+                                                    <br>
+                                                    rate by 45% during peak holiday
+                                                    <br>
+                                                    seasons.
+                                                </p>
+                                            </div>
+
+                                        </div>
+
+                                        <!-- Button -->
+                                        <button class="btn btn-light text-primary fw-semibold px-4 py-2 rounded-3">
+                                            Request Leave
+                                        </button>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Guide -->
+                            <div class="col-lg-4 d-flex">
+                                <div class="guide-card w-100">
+                                    <div class="guide-overlay">
+                                        <small class="guide-label d-block mb-2">
+                                            COMPANY POLICY
+                                        </small>
+
+                                        <h4 class="guide-title mb-0">
+                                            Work-Life Balance Guide
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <script src="emp.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <style>
+        body {
+            background: url("../images/emp.png") no-repeat center center;
+            background-size: cover;
+            height: 100vh;
+        }
+    </style>
+    </head>
+
+<body class="bg-light">
+
+    <div class="container vh-100 d-flex justify-content-center align-items-center">
+
+        <div class="card shadow p-4" style="width: 400px;">
+
+            <h2 class="text-center mb-4">Sign Up</h2>
+
+            <form id="signupForm">
+
+                <!-- Email -->
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+
+                    <input
+                        type="email"
+                        class="form-control"
+                        id="email"
+                        placeholder="Enter your email"
+                        required>
+                </div>
+
+                <!-- Password -->
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+
+                    <input
+                        type="password"
+                        class="form-control"
+                        id="password"
+                        placeholder="Enter your password"
+                        required>
+                </div>
+
+                <!-- Sign Up Button -->
+                <button
+                    type="submit"
+                    class="btn btn-success w-100">
+
+                    Sign Up
+
+                </button>
+
+            </form>
+
+            <p class="text-center mt-3 mb-0">
+                Already have an account?
+                <a href="login.html">Login</a>
+            </p>
+
+        </div>
+
+    </div>
+
+    <script type="module" src="sign.js"></script>
+
+</body>
+
+</html>

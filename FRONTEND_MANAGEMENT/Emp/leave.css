@@ -1,0 +1,670 @@
+/*==================================================
+                GOOGLE FONT
+==================================================*/
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+    background: #D8DADC;
+    color: #1E293B;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+.page {
+    display: flex;
+    min-height: 100vh;
+}
+
+/*==================================================
+                SIDEBAR
+==================================================*/
+
+.sidebar {
+    width: 260px;
+    background: #FFFFFF;
+    border-right: 1px solid #E7EDF5;
+    padding: 28px 18px;
+    flex-shrink: 0;
+}
+
+.sidebar h4 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #0058BE;
+    margin-bottom: 25px;
+}
+
+.sidebar hr {
+    margin: 18px 0;
+    border-color: #EEF2F6;
+}
+
+.sidebar .nav-item {
+    margin-bottom: 8px;
+}
+
+.sidebar .nav-link {
+
+    display: flex;
+    align-items: center;
+
+    padding: 14px 18px;
+
+    border-radius: 12px;
+
+    color: #5E6B80;
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+    transition: .25s;
+}
+
+.sidebar .nav-link i {
+
+    font-size: 18px;
+
+    margin-right: 12px;
+}
+
+.sidebar .nav-link:hover {
+
+    background: #EDF5FF;
+
+    color: #0058BE;
+}
+
+.active-menu {
+
+    background: #0058BE;
+
+    color: #FFFFFF !important;
+}
+
+/*==================================================
+                RIGHT SECTION
+==================================================*/
+
+.flex-grow-1 {
+
+    background: #F4F7FB;
+}
+
+/*==================================================
+                HEADER
+==================================================*/
+
+.header {
+
+    height: 72px;
+
+    background: #FFFFFF;
+
+    border-bottom: 1px solid #E7EDF5;
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    align-items: center;
+
+    padding: 0 32px;
+
+    font-size: 15px;
+
+    font-weight: 600;
+}
+
+.header i {
+
+    font-size: 24px;
+
+    margin-left: 10px;
+
+    color: #0058BE;
+}
+
+/*==================================================
+                MAIN CONTAINER
+==================================================*/
+
+.container-xxl {
+
+    max-width: 1450px;
+
+    padding-top: 35px;
+
+    padding-bottom: 35px;
+}
+
+/*==================================================
+                PAGE TITLE
+==================================================*/
+
+h2 {
+
+    font-size: 38px;
+
+    font-weight: 700;
+
+    margin-top: 12px;
+
+    margin-bottom: 8px;
+
+    color: #16233A;
+}
+
+.text-muted {
+
+    color: #7B8797 !important;
+
+    font-size: 16px;
+
+    line-height: 28px;
+}
+
+.form-card {
+
+    background: #FFFFFF;
+
+    border-radius: 18px;
+
+    padding: 32px;
+
+    border: 1px solid #E8EDF5;
+
+    box-shadow: 0 6px 20px rgba(0, 0, 0, .05);
+}
+
+/*==================================================
+                FORM
+==================================================*/
+
+.form-label,
+label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .7px;
+    color: #5E6B80;
+    margin-bottom: 8px;
+}
+
+.form-control,
+.form-select {
+    height: 52px;
+    border: 1px solid #D7DEE8;
+    border-radius: 12px;
+    background: #FFFFFF;
+    font-size: 15px;
+    color: #1E293B;
+    transition: .25s;
+}
+
+.form-control::placeholder {
+    color: #A0AEC0;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #0058BE;
+    box-shadow: 0 0 0 3px rgba(0, 88, 190, .12);
+}
+
+textarea.form-control {
+    min-height: 140px;
+    padding-top: 14px;
+    resize: none;
+}
+
+/*==================================================
+                PRIORITY BUTTON
+==================================================*/
+
+.btn-group {
+    width: 100%;
+}
+
+.btn-group .btn {
+
+    height: 52px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    border-color: #D7DEE8;
+
+    background: #FFFFFF;
+
+    color: #55657D;
+
+    transition: .25s;
+}
+
+.btn-check:checked+.btn {
+
+    background: #0058BE;
+
+    color: #FFFFFF;
+
+    border-color: #0058BE;
+}
+
+.btn-group .btn:first-of-type {
+
+    border-radius: 12px 0 0 12px;
+}
+
+.btn-group .btn:last-of-type {
+
+    border-radius: 0 12px 12px 0;
+}
+
+/*==================================================
+                UPLOAD BOX
+==================================================*/
+
+.upload-box {
+
+    width: 100%;
+
+    height: 165px;
+
+    border: 2px dashed #D6DCE6;
+
+    border-radius: 16px;
+
+    background: #FAFBFD;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    transition: .3s;
+
+    cursor: pointer;
+}
+
+.upload-box:hover {
+
+    border-color: #0058BE;
+
+    background: #F4F8FF;
+}
+
+.upload-box i {
+
+    font-size: 48px;
+
+    color: #0058BE;
+}
+
+.upload-box h5 {
+
+    margin-top: 14px;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    color: #24364B;
+}
+
+.upload-box p {
+
+    margin-top: 5px;
+
+    font-size: 13px;
+
+    color: #7A8799;
+}
+
+/*==================================================
+                BUTTONS
+==================================================*/
+
+.btn-light {
+
+    min-width: 170px;
+
+    height: 50px;
+
+    border-radius: 12px;
+
+    background: #FFFFFF;
+
+    border: 1px solid #D8DEE8;
+
+    font-weight: 600;
+
+    color: #3D4D63;
+}
+
+.btn-light:hover {
+
+    background: #F3F6FA;
+}
+
+.btn-dark {
+
+    min-width: 180px;
+
+    height: 50px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #071D49;
+
+    font-weight: 600;
+}
+
+.btn-dark:hover {
+
+    background: #0A2C69;
+}
+
+/*==================================================
+                DURATION CARD
+==================================================*/
+
+.duration-card {
+    background: #071D49;
+    color: #FFFFFF;
+    border-radius: 18px;
+    padding: 28px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .08);
+}
+
+.duration-card small {
+    display: block;
+    color: #AFC4E7;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.duration-card h1 {
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1;
+    margin: 0;
+}
+
+.duration-card h4 {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+.duration-card hr {
+    margin: 24px 0;
+    border-color: rgba(255, 255, 255, .15);
+}
+
+/*==================================================
+            APPROVAL ANALYSIS CARD
+==================================================*/
+
+.analysis-card {
+    background: #FFFFFF;
+    border-radius: 18px;
+    border: 1px solid #E8EDF5;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, .04);
+}
+
+.analysis-card h5 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.analysis-card h6 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #22324D;
+}
+
+.analysis-card small {
+    font-size: 13px;
+    color: #7B8797;
+}
+
+.progress {
+    height: 8px;
+    border-radius: 50px;
+    background: #EDF1F7;
+}
+
+.progress-bar {
+    border-radius: 50px;
+}
+
+/*==================================================
+                POLICY TIP CARD
+==================================================*/
+
+.tip-card {
+    margin-top: 24px;
+    border: none;
+    border-radius: 18px;
+    background: #1B2A41;
+    color: #FFFFFF;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .06);
+}
+
+.tip-card .card-body {
+    padding: 24px;
+}
+
+.tip-card h4 {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.tip-text {
+    color: #B8C4D6;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.info-circle {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .12);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #FFFFFF;
+    font-size: 18px;
+}
+
+/*==================================================
+                ICONS
+==================================================*/
+
+.bi-check-circle {
+    color: #0058BE !important;
+}
+
+.bi-exclamation-triangle {
+    color: #F4B400 !important;
+}
+
+/*==================================================
+                SPACING
+==================================================*/
+
+.row.g-4 {
+    --bs-gutter-x: 24px;
+    --bs-gutter-y: 24px;
+}
+
+/*==================================================
+                RESPONSIVE
+==================================================*/
+
+@media (max-width:991px) {
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: -260px;
+        width: 260px;
+        height: 100vh;
+        transition: .3s;
+        z-index: 1050;
+    }
+
+    .sidebar.show {
+        left: 0;
+    }
+
+    .page {
+        flex-direction: column;
+    }
+
+    
+
+    .container-xxl {
+        padding: 24px 18px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    .form-card {
+        padding: 24px;
+    }
+
+    .duration-card,
+    .analysis-card,
+    .tip-card {
+        margin-top: 24px;
+    }
+}
+
+@media (max-width:767px) {
+
+    .header {
+        justify-content: space-between;
+        padding: 0 16px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    .text-muted {
+        font-size: 15px;
+        line-height: 24px;
+    }
+
+    .btn-light,
+    .btn-dark {
+        width: 100%;
+        min-width: 100%;
+    }
+
+    .d-flex.justify-content-end {
+        flex-direction: column;
+    }
+
+    .upload-box {
+        height: 150px;
+    }
+
+    .duration-card h1 {
+        font-size: 48px;
+    }
+
+    .duration-card h4 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width:575px) {
+
+    .sidebar {
+        padding: 20px 14px;
+    }
+
+    .form-card {
+        padding: 18px;
+    }
+
+    .analysis-card,
+    .tip-card,
+    .duration-card {
+        padding: 18px;
+    }
+
+    .upload-box i {
+        font-size: 40px;
+    }
+
+    .upload-box h5 {
+        font-size: 16px;
+    }
+
+    .upload-box p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width:767px) {
+
+    .container-xxl {
+        padding: 20px 14px;
+    }
+
+    .btn-group {
+        flex-direction: column;
+    }
+
+    .btn-group .btn {
+
+        width: 100%;
+
+        border-radius: 12px !important;
+
+        margin-bottom: 10px;
+    }
+
+    textarea.form-control {
+        min-height: 120px;
+    }
+
+    .duration-card,
+    .analysis-card,
+    .tip-card {
+        margin-top: 20px;
+    }
+}
