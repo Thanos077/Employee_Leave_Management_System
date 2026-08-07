@@ -49,7 +49,7 @@ loginForm.addEventListener("submit", async (event) => {
             role: "Employee"
         };
 
-        const response = await fetch("https://employee-leave-management-system-2fr0.onrender.com", {
+        const response = await fetch("https://employee-leave-management-system-2fr0.onrender.com/employee", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
