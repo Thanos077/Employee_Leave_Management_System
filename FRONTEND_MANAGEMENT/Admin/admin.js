@@ -136,7 +136,7 @@ async function approveLeave(id, button) {
 async function rejectLeave(id, button) {
 
     const token = localStorage.getItem("token");
-
+        
     await fetch(`https://employee-leave-management-system-2fr0.onrender.com/admin/leave/${id}`, {
         method: "PATCH",
         headers: {
