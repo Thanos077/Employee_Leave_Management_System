@@ -8,9 +8,13 @@ from pydantic import BaseModel
 import json
 import os
 
-# Initialize Firebase
-cred = credentials.Certificate("serviceAccountKey.json")
-firebase_admin.initialize_app(cred)
+# Initialize Firebase from Render Environment Variable
+firebase_credentials = json.loads(os.environ["FIREBASE_CREDENTIALS"])
+
+cred = credentials.Certificate(firebase_credentials)
+
+if not firebase_admin._apps:
+    firebase_admin.initialize_app(cred)
 
 router = APIRouter()
 
