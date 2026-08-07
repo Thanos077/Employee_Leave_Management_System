@@ -2,7 +2,7 @@ async function loadLeaves() {
     try {
         const token = localStorage.getItem("token");
 
-        const response = await fetch("http://127.0.0.1:8000/leave", {
+        const response = await fetch("https://employee-leave-management-system-2fr0.onrender.com/leave", {
             method: "GET",
             headers: {
                 "Authorization": "Bearer " + token

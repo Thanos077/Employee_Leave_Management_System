@@ -6,7 +6,7 @@ async function getLeaves() {
 
     const token = localStorage.getItem("token");
 
-    const response = await fetch("http://127.0.0.1:8000/admin/leave", {
+    const response = await fetch("https://employee-leave-management-system-2fr0.onrender.com/admin/leave", {
         headers: {
             Authorization: `Bearer ${token}`
         }
@@ -118,7 +118,7 @@ async function approveLeave(id, button) {
 
     const token = localStorage.getItem("token");
 
-    await fetch(`http://127.0.0.1:8000/admin/leave/${id}`, {
+    await fetch(`https://employee-leave-management-system-2fr0.onrender.com/admin/leave/${id}`, {
         method: "PATCH",
         headers: {
             "Content-Type": "application/json",
@@ -137,7 +137,7 @@ async function rejectLeave(id, button) {
 
     const token = localStorage.getItem("token");
 
-    await fetch(`http://127.0.0.1:8000/admin/leave/${id}`, {
+    await fetch(`https://employee-leave-management-system-2fr0.onrender.com/admin/leave/${id}`, {
         method: "PATCH",
         headers: {
             "Content-Type": "application/json",
