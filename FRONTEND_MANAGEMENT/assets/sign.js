@@ -36,6 +36,8 @@ const signupForm = document.getElementById("signupForm");
 signupForm.addEventListener("submit", async (event) => {
     event.preventDefault();
 
+    const name = document.getElementById("name").value.trim();
+    const age = Number( document.getElementById("age").value.trim());
     const email = document.getElementById("email").value.trim();
     const password = document.getElementById("password").value.trim();
 
@@ -45,7 +47,7 @@ signupForm.addEventListener("submit", async (event) => {
             email,
             password
         );
-        
+        const token = await userCredential.user.getIdToken();
         // Save user in FastAPI
         const response = await fetch("https://employee-leave-management-system-2fr0.onrender.com/employee", {
             method: "POST",
@@ -53,6 +55,8 @@ signupForm.addEventListener("submit", async (event) => {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
+                name: name,
+                age:age,
                 email: email,
                 password: password,
                 role: "Employee"

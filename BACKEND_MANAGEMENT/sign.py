@@ -21,6 +21,8 @@ router = APIRouter()
 FILE_NAME = "sign.json"
 
 class Emp(BaseModel):
+    name:str
+    age:int
     email: str
     role: str = "Employee"
 
@@ -64,6 +66,8 @@ def register_employee(user: Emp, authorization: str = Header(...)):
 
     employee = {
         "id": firebase_uid,
+        "name":user.name,
+        "age":user.age,
         "email": decoded_token["email"],
         "role": user.role
     }
