@@ -1,3 +1,10 @@
+function showToast(message) {
+    const toastElement = document.getElementById("successToast");
+    document.getElementById("toastMessage").textContent = message;
+
+    const toast = new bootstrap.Toast(toastElement);
+    toast.show();
+}
 const form = document.getElementById("leaveForm")
 form.addEventListener("submit", async function (event) {
     event.preventDefault();
@@ -31,13 +38,13 @@ form.addEventListener("submit", async function (event) {
 
         const result = await response.json();
 
-        alert(result.message);
+        showToast(result.message);
 
         form.reset();
 
     } catch (error) {
         console.log(error);
-        alert("Something went wrong!");
+        showToast("Something went wrong!");
     }
 });
 const links = document.querySelectorAll(".nav-link");

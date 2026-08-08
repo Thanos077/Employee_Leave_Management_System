@@ -6,6 +6,14 @@ import {
     signInWithEmailAndPassword
 } from "https://www.gstatic.com/firebasejs/12.16.0/firebase-auth.js";
 
+
+function showToast(message) {
+    const toastElement = document.getElementById("successToast");
+    document.getElementById("toastMessage").textContent = message;
+
+    const toast = new bootstrap.Toast(toastElement);
+    toast.show();
+}
 // Firebase configuration
 const firebaseConfig = {
     apiKey: "AIzaSyBJrhLqtCl3q83FT247xmfqCyTCJIDfdbY",
@@ -33,53 +41,69 @@ loginForm.addEventListener("submit", async (event) => {
     const password = document.getElementById("password").value.trim();
 
     try {
-        // Login user
+        // Login user with Firebase
         const userCredential = await signInWithEmailAndPassword(
             auth,
             email,
             password
         );
 
+        // Get Firebase token
         const token = await userCredential.user.getIdToken();
+
+        // Store token
         localStorage.setItem("token", token);
 
+        // Send user information to backend
         const data = {
             email: email,
-            password: password,
             role: "Employee"
         };
 
-        const response = await fetch("https://employee-leave-management-system-2fr0.onrender.com/employee", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-                "Authorization": "Bearer " + token
-            },
-            body: JSON.stringify(data)
-        });
+        const response = await fetch(
+            "https://employee-leave-management-system-2fr0.onrender.com/employee",
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization": "Bearer " + token
+                },
+                body: JSON.stringify(data)
+            }
+        );
+
+        if (!response.ok) {
+            throw new Error("Unable to get user role.");
+        }
 
         const result = await response.json();
 
         console.log(result);
+
         const role = result.details.role;
 
-        console.log(role);
+        console.log("Role:", role);
 
-        if (role === "Employee") {
-            window.location.href = "../Emp/emp.html";
-        } else {
-            window.location.href = "../Admin/admin.html";
-        }
+        // Show success message
+        showToast("Login successful!");
 
+        // Wait before redirecting
+        setTimeout(() => {
 
+            if (role === "Employee") {
+                window.location.href = "../Emp/emp.html";
+            } else {
+                window.location.href = "../Admin/admin.html";
+            }
 
+        }, 1500);
 
     } catch (error) {
         console.error("Login Error:", error);
-        alert(error.message);
+
+        showToast(error.message);
     }
 });
-
 // Show / Hide Password
 const passwordInput = document.getElementById("password");
 const togglePassword = document.getElementById("togglePassword");

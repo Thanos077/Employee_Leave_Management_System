@@ -6,6 +6,13 @@ import {
     createUserWithEmailAndPassword
 } from "https://www.gstatic.com/firebasejs/12.16.0/firebase-auth.js";
 
+function showToast(message) {
+    const toastElement = document.getElementById("successToast");
+    document.getElementById("toastMessage").textContent = message;
+
+    const toast = new bootstrap.Toast(toastElement);
+    toast.show();
+}
 // Firebase configuration
 const firebaseConfig = {
     apiKey: "AIzaSyBJrhLqtCl3q83FT247xmfqCyTCJIDfdbY",
@@ -55,7 +62,7 @@ signupForm.addEventListener("submit", async (event) => {
         const data = await response.json();
         console.log(data);
 
-        alert("Account created successfully!");
+        showToast("Account created successfully!");
         window.location.href = "login.html";
 
     } catch (error) {
