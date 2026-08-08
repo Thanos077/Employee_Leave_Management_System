@@ -80,6 +80,33 @@ def register_employee(user: Emp, authorization: str = Header(...)):
         "details": employee
     }
 
+@router.get("/employee/me")
+def get_current_employee(authorization: str = Header(...)):
+    try:
+        token = authorization.replace("Bearer ", "")
+        decoded_token = auth.verify_id_token(token)
+
+    except Exception:
+        raise HTTPException(
+            status_code=401,
+            detail="Invalid or expired Firebase token"
+        )
+
+    firebase_uid = decoded_token["uid"]
+
+    employees = load_emp()
+
+    for employee in employees:
+        if employee["id"] == firebase_uid:
+            return {
+                "status": "success",
+                "details": employee
+            }
+
+    raise HTTPException(
+        status_code=404,
+        detail="Employee not found"
+    )
 
 @router.get("/employee")
 def get_all_employees(authorization: str = Header(...)):

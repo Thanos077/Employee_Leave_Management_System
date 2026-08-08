@@ -52,13 +52,13 @@ signupForm.addEventListener("submit", async (event) => {
         const response = await fetch("https://employee-leave-management-system-2fr0.onrender.com/employee", {
             method: "POST",
             headers: {
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
+                "Authorization": "Bearer " + token
             },
             body: JSON.stringify({
                 name: name,
                 age:age,
                 email: email,
-                password: password,
                 role: "Employee"
             })
         });

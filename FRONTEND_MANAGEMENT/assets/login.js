@@ -54,55 +54,49 @@ loginForm.addEventListener("submit", async (event) => {
         // Store token
         localStorage.setItem("token", token);
 
-        // Send user information to backend
-        const data = {
-            email: email,
-            role: "Employee"
-        };
 
         const response = await fetch(
-            "https://employee-leave-management-system-2fr0.onrender.com/employee",
+            "https://employee-leave-management-system-2fr0.onrender.com/employee/me",
             {
-                method: "POST",
+                method: "GET",
                 headers: {
-                    "Content-Type": "application/json",
                     "Authorization": "Bearer " + token
-                },
-                body: JSON.stringify(data)
+                }
             }
         );
+        
 
-        if (!response.ok) {
-            throw new Error("Unable to get user role.");
-        }
+if (!response.ok) {
+    throw new Error("Unable to get user role.");
+}
 
-        const result = await response.json();
+const result = await response.json();
 
-        console.log(result);
+console.log(result);
 
-        const role = result.details.role;
+const role = result.details.role;
 
-        console.log("Role:", role);
+console.log("Role:", role);
 
-        // Show success message
-        showToast("Login successful!");
+// Show success message
+showToast("Login successful!");
 
-        // Wait before redirecting
-        setTimeout(() => {
+// Wait before redirecting
+setTimeout(() => {
 
-            if (role === "Employee") {
-                window.location.href = "../Emp/emp.html";
-            } else {
-                window.location.href = "../Admin/admin.html";
-            }
+    if (role === "Employee") {
+        window.location.href = "../Emp/emp.html";
+    } else {
+        window.location.href = "../Admin/admin.html";
+    }
 
-        }, 1500);
+}, 1500);
 
     } catch (error) {
-        console.error("Login Error:", error);
+    console.error("Login Error:", error);
 
-        showToast(error.message);
-    }
+    showToast(error.message);
+}
 });
 // Show / Hide Password
 const passwordInput = document.getElementById("password");
